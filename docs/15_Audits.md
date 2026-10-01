@@ -1,6 +1,6 @@
 # Independent audits
 
-Two audits by the *Validator*, a separate AI agent with only the context it needs (see document 14). Each finding was **challenged before being applied**.
+Three audits by the *Validator*, a separate AI agent with only the context it needs (see document 14). Each finding was **challenged before being applied**.
 
 ## Audit 1 · Coherence: case data ↔ prototype
 **Scope:** the driving case (document 08), the data file, the input-data panel, and the questionnaire and the diagnostic in both modes (*Today* and *Proposal*).
@@ -43,7 +43,18 @@ Two audits by the *Validator*, a separate AI agent with only the context it need
 
 **New behaviors** the specification had fixed without a prior decision (e.g. the employer is optional, both salaries at risk when partners share the employer) were listed separately for Alejandro to accept. All were accepted.
 
+## Audit 3 · Confidentiality before publishing
+**Scope:** this repository, before making it public, compared against the internal inventory of the platform (not published).
+
+**Result:** 13 findings; **12 applied, 1 kept by decision**.
+- **Two blocking leaks:** a table with figures that Sherpas' engine produced for the demo household (scenario losses, balances, a literal quote), and a cash-flow figure computed by the engine. Both removed.
+- **Also removed:** short literal quotes from the demo diagnostic, an engine parameter and the name of a data provider, descriptions of platform defects, and internal file paths in the Validator's definition.
+- **Fixed:** references to files that only exist in the private working copy, a hard-coded decision count that had gone stale, and the claim that the repository would never be public (decision 27).
+- **Kept by decision:** the detailed (fictional) demo household data in the driving case, already summarized on the Notion page.
+- **Not in the report, but triggered by it:** the prototype password was replaced by a strong random one, since a weak password makes the encryption pointless.
+
 ## What we learned
 - **Self-checks miss what the author doesn't think to test.** The Validator tested cases outside the driving case and found three bugs.
 - **Fixes need re-checking.** The worst finding of audit 1 was introduced by the previous round of fixes.
+- **Cleaning by rules isn't enough.** The export filter passed, and the Validator still found two leaks the rules didn't cover.
 - **Not every finding is worth applying.** Each one was weighed against its cost and against decisions already made.

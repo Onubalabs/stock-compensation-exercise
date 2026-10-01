@@ -28,7 +28,7 @@ An AI that audits its own work tends to confirm it. So the audits were done by a
 - **Only the context it needs:** what to read, what not to read, how to run the prototype and how to report. None of our conclusions.
 - **Read-only access:** it can't change anything.
 
-Its definition is in `.claude/agents/validador.md`. Each report was **challenged before being applied**: of 32 findings across two audits, 31 were applied and 1 was rejected with a reason (document 15).
+Its definition is in `.claude/agents/validador.md`. It ran three audits (coherence, the specification, and confidentiality before publishing this repository). Each report was **challenged before being applied**, and every finding not applied has a stated reason (document 15).
 
 ## What AI got wrong, and how it was caught
 - **A wrong percentage:** the stress test said Acme would be "13% of investable assets" after a 40% drop. Claude caught it while checking every figure against the case data; it is 23%.
@@ -38,6 +38,7 @@ Its definition is in `.claude/agents/validador.md`. Each report was **challenged
 The lesson that shaped the process: **AI is fast at producing and checking, but it needs a second, independent look and a human who decides.**
 
 ## Confidentiality guardrails
+- Before this repository was published, the Validator audited it for confidentiality and found **two leaks that would have been published** (figures produced by Sherpas' engine for the demo household). They were removed, together with literal quotes and descriptions of platform defects.
 - Nothing seen inside the platform is published in readable form: the platform inventory isn't included, and the prototype (which reproduces confidential screens) is published **encrypted**.
 - Every export of the documents runs a filter that stops if any forbidden term or figure remains.
 - Internal sources that were off-limits for the deliverable were never cited.

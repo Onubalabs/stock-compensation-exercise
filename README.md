@@ -16,7 +16,7 @@ Alejandro Moreno's answer to the exercise *"How would you integrate stock compen
 | [Launch kit](docs/11_Launch_kit.md) | Release notes and the advisor guide | English |
 | [Notion page source](docs/12_Notion_main.md) · [Prototype page](docs/13_Prototype_EN.md) | The same content as Notion | English |
 | [How we worked with AI](docs/14_AI_workflow.md) | Working agreements, where AI was used, what it got wrong | English |
-| [Independent audits](docs/15_Audits.md) · [The Validator agent](.claude/agents/validador.md) | Two audits by a separate AI agent, and how each finding was challenged | English · Spanish |
+| [Independent audits](docs/15_Audits.md) · [The Validator agent](.claude/agents/validador.md) | Three audits by a separate AI agent, and how each finding was challenged | English · Spanish |
 | [Work in progress](docs/07_Trabajo_en_curso.md) | **The working document:** problem, scope, functional design and the log of every decision, including the ones replaced and why | Spanish |
 | [Driving case](docs/08_Caso_conductor.md) | Every input of the prototype, where it comes from, the assumptions, the derived figures and what can't be recalculated | Spanish |
 | [Prototype guide (working version)](docs/09_Guia_del_prototipo.md) · [Glossary](docs/06_Glosario.md) · [Domain training](docs/04_Formacion_stock_compensation.md) | How the domain was learned from scratch | Spanish |
